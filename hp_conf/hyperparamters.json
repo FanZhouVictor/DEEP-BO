@@ -1,0 +1,116 @@
+{
+    "dataset": "dataset name",
+    "model": "model name",
+    "config": {
+        "num_epochs": 100
+    },
+    "hyperparams": {
+        "hidden_dim": {
+            "type": "int",
+            "value_type": "discrete",
+            "range": [
+                1,
+                100
+            ]
+        },
+        "num_hidden_layers": {
+            "type": "int",
+            "value_type": "discrete",
+            "range": [
+                1,
+                100
+            ]
+        },
+        "optimizer": {
+            "type": "str",
+            "value_type": "categorical",
+            "default": "SGD",
+            "range": [
+                "SGD",
+                "Adadelta",
+                "Adagrad",
+                "Adam",
+                "AdamW",
+                "ASGD",
+                "SparseAdam",
+                "Adamax",
+                "LBFGS",
+                "NAdam",
+                "RAdam",
+                "RMSprop",
+                "Rprop"
+            ]
+        },
+        "activation_functions": {
+            "type": "str",
+            "value_type": "categorical",
+            "default": "ReLU",
+            "range": [
+                "ReLU",
+                "Sigmoid",
+                "Tanh",
+                "LeakyReLU",
+                "ELU",
+                "Hardshrink",
+                "Hardsigmoid",
+                "Hardtanh",
+                "Hardswish",
+                "LogSigmoid",
+                "PReLU",
+                "ReLU6",
+                "RReLU",
+                "SELU",
+                "CELU",
+                "GELU",
+                "SiLU",
+                "Mish",
+                "Softplus",
+                "Softshrink",
+                "Softsign",
+                "Tanhshrink",
+                "Threshold",
+                "GLU"
+            ]
+        },
+        "batch_size": {
+            "type": "int",
+            "value_type": "preordered",
+            "default": 32,
+            "range": [
+                16,
+                32,
+                64,
+                128
+            ]
+        },
+        "LearningRate": {
+            "type": "float",
+            "value_type": "continuous",
+            "default": 0.01,
+            "range": [
+                0.0001,
+                0.05
+            ]
+        },
+        "weightdecay": {
+            "type": "float",
+            "value_type": "continuous",
+            "default": 0.01,
+            "range": [
+                0.0001,
+                1e-06
+            ]
+        },
+        "preordered_param": {
+            "type": "int",
+            "value_type": "preordered",
+            "range": [
+                16,
+                32,
+                64,
+                128,
+                256
+            ]
+        }
+    }
+}
